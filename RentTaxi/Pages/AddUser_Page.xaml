@@ -1,0 +1,75 @@
+﻿<Page x:Class="RentTaxi.Pages.AddUser_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RentTaxi.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="AddUser_Page">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+      <Label Grid.Row="0" 
+             Grid.Column="0"
+             Grid.ColumnSpan="2"
+             Content="Add User" FontSize="14"></Label>
+        
+        <Label Grid.Row="1"
+               Grid.Column="0"
+               Content="Фамилия"></Label>
+        <TextBox Grid.Column="1"
+                 Grid.Row="1"
+                 x:Name="tbFName"></TextBox>
+
+        <Label Grid.Row="2"
+               Grid.Column="0"
+               Content="Имя"></Label>
+        <TextBox Grid.Column="1"
+                 Grid.Row="2"
+                 x:Name="tbLName"></TextBox>
+
+        <Label Grid.Row="4"
+               Grid.Column="0"
+               Content="Дата рождения"></Label>
+        <DatePicker Grid.Column="1"
+                 Grid.Row="4"
+                 x:Name="dpDoB"></DatePicker>
+
+        <Label Grid.Row="5"
+               Grid.Column="0"
+               Content="Пол"></Label>
+        <ComboBox Grid.Column="1"
+                 Grid.Row="5"
+                 x:Name="lbGender">
+            <ComboBoxItem Content="М"></ComboBoxItem>
+            <ComboBoxItem Content="Ж"></ComboBoxItem>
+        </ComboBox>
+        
+        <Label x:Name="errorMesage" 
+               Grid.Row="6"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"></Label>
+        <Button Grid.Column="1"
+                 Grid.Row="7"
+                 x:Name="AddUser"
+                Content="Добавить"
+                Click="AddUser_Click"></Button>
+    </Grid>    
+</Page>
